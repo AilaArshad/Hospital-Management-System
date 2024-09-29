@@ -1418,6 +1418,7 @@ public class Admin extends javax.swing.JFrame {
             patientDAO.addPatient(newPatient);
             JOptionPane.showMessageDialog(this, "Patient added successfully!");
             populatePatientTable();
+            populatePatientComboBox();
             clearTextFields();
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "ID and Age must be numbers.");
@@ -1437,6 +1438,7 @@ public class Admin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Patient with ID " + patientId + " deleted successfully.");
             populatePatientTable();
             clearTextFields();
+            populatePatientComboBox();
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Invalid Patient ID. Please enter a valid number.");
         }
@@ -1475,6 +1477,7 @@ public class Admin extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Patient with ID " + id + " updated successfully.");
         populatePatientTable();
         clearTextFields();
+        populatePatientComboBox();
     }//GEN-LAST:event_jPanel10MouseClicked
 
     private void searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchKeyReleased
@@ -1524,6 +1527,7 @@ public class Admin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Doctor added successfully!");
             populateDoctorTable();
             clearTextFieldsDoc();
+            populateDoctorComboBox();
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "ID and salary must be numbers.");
         } catch (Exception e) {
@@ -1557,6 +1561,7 @@ public class Admin extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Doctpr with ID " + id + " updated successfully.");
         populateDoctorTable();
         clearTextFieldsDoc();
+        populateDoctorComboBox();
     }//GEN-LAST:event_jPanel14MouseClicked
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
@@ -1590,6 +1595,7 @@ public class Admin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Doctor with ID " + doctorId + " deleted successfully.");
             populateDoctorTable();
             clearTextFieldsDoc();
+            populateDoctorComboBox();
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Invalid Doctor ID. Please enter a valid number.");
         }
@@ -1637,6 +1643,7 @@ public class Admin extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Appointment added successfully!");
                 populateAppointmentTable();
                 clearTextFieldsApp();
+                populateAppointmentComboBox();
             } catch (ParseException e) {
                 JOptionPane.showMessageDialog(null, "Invalid date or time format. Please use 'yyyy-MM-dd' for date and 'HH:mm a' for time.");
             } catch (NullPointerException e) {
@@ -1658,6 +1665,7 @@ public class Admin extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Appointment deleted successfully!");
                 populateAppointmentTable();
                 clearTextFieldsApp();
+                populateAppointmentComboBox();
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(null, "Invalid appointment ID. Please enter a valid number.");
             }
